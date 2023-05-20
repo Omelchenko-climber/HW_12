@@ -95,7 +95,7 @@ def del_contact(name: str) -> None:
 
 @input_error
 def close() -> None:
-    filename = input('Enter the name of the file you want to save your notebook or press enter: ')
+    filename = input('Enter the name of the file you want to save your notebook or press enter to default: ')
     if not filename:
         filename = 'notebook.txt'
     USERS.serialize(filename)
@@ -155,7 +155,7 @@ def get_user_input(user_command: str) -> str:
 
 @input_error
 def name_load_file() -> None:
-    user_filename = input('Enter the name of a file you want to load your notebook from or press enter: ')
+    user_filename = input('Enter the name of the file you want to load your notebook from or press enter to default: ')
     if not user_filename or not Path(user_filename).exists():
         if Path('notebook.txt').exists:
             USERS.deserialize('notebook.txt')
