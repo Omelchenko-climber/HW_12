@@ -1,8 +1,9 @@
+import pickle
+import re
 from collections import UserDict
 from datetime import datetime, date
 from pathlib import Path
-import pickle
-import re
+
 
 
 class Field:
