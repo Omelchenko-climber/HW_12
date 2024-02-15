@@ -8,7 +8,7 @@ from pathlib import Path
 
 class Field:
     def __init__(self, value: str) -> None:
-        self.value = value
+        self.__value = value
 
     @property
     def value(self):
